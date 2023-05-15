@@ -45,32 +45,32 @@ HTTP protokollet erbjuder ett antal olika metoder för att hämta och skicka inf
 För att få tag på själva informationsresursen använder man metoden GET, även den metoden är idempotent. Notera att GET metoden är en utvidgning av HEAD metoden då information om den beständiga identifieraren också inkluderas.
 
 > **Rekommendation UM-3** Uppslagning av en informationsresurs sker via HTTP GET och i sin enklaste form besvaras den med statuskod 200 och en representation av informationsresursen.
-``` HTTP
+``` HTTP-nolint
 GET /foo HTTP/1.1
 Host: org1.se
-# ---
+---
 HTTP/1.1 200 OK
 Content-Type: text/html
 
-# representation i HTML
+[representation i HTML]
 ```
 
 En informationsresurs kan ha flera olika likvärdiga representationer som särskiljer sig endast genom användning av olika format och språk. Vilken representation man får avgörs av vad man ber om i HTTP GET anropet, detta kallas server-driven content negotiation.
 
 > **Rekommendation UM-4** Använd HTTP headrar som `Accept`, `Accept-Language` och `Accept-Encoding` för att ange vilken representation du vill ha. HTTP svar bör ange alternativa representationer med hjälp av HTTP link headern och relationen alternate. Länkarna särskiljs mha länk-attributet type för format och hreflang för språk.
 
-``` HTTP
+``` HTTP-nolint
 GET /foo HTTP/1.1
 Host: org1.se
 Accept: application/pdf
-# ---
+---
 HTTP/1.1 200 OK
 Content-Type: application/pdf
 Link: 
   </foo>; rel="canonical"; type="text/html",
   </foo>; rel="alternate"; type="application/pdf"
 
-# representation i pdf
+[representation i pdf]
 ```
 
 Ibland förändras informationsresursers uttryck över tiden. Det kan vara så att man byter ut system eller uppdaterar ett API på ett sätt som inte är bakåtkompatibelt. I de fallen räcker inte den traditionella content negotioation mekanismen till. I den situationen finns det en komplementär mekanism som kallas content-negotiotion by profile. Mekanismen innebär att man utöver formatet definierar upp ett antal profiler som man kan efterfråga. Observera att varje profil kan finnas i flera format, t.ex. version 2 av ett API finns både i XML och JSON.
