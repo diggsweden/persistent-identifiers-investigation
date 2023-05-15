@@ -48,11 +48,11 @@ För att få tag på själva informationsresursen använder man metoden GET, äv
 ``` HTTP
 GET /foo HTTP/1.1
 Host: org1.se
----
+# ---
 HTTP/1.1 200 OK
-Content-Type=text/html
+Content-Type: text/html
 
-[representation i HTML]
+# representation i HTML
 ```
 
 En informationsresurs kan ha flera olika likvärdiga representationer som särskiljer sig endast genom användning av olika format och språk. Vilken representation man får avgörs av vad man ber om i HTTP GET anropet, detta kallas server-driven content negotiation.
@@ -63,14 +63,14 @@ En informationsresurs kan ha flera olika likvärdiga representationer som särsk
 GET /foo HTTP/1.1
 Host: org1.se
 Accept: application/pdf
----
+# ---
 HTTP/1.1 200 OK
 Content-Type: application/pdf
-Link:
+Link: 
   </foo>; rel="canonical"; type="text/html",
   </foo>; rel="alternate"; type="application/pdf"
 
-[representation i pdf]
+# representation i pdf
 ```
 
 Ibland förändras informationsresursers uttryck över tiden. Det kan vara så att man byter ut system eller uppdaterar ett API på ett sätt som inte är bakåtkompatibelt. I de fallen räcker inte den traditionella content negotioation mekanismen till. I den situationen finns det en komplementär mekanism som kallas content-negotiotion by profile. Mekanismen innebär att man utöver formatet definierar upp ett antal profiler som man kan efterfråga. Observera att varje profil kan finnas i flera format, t.ex. version 2 av ett API finns både i XML och JSON.
