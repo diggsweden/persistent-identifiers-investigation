@@ -13,7 +13,7 @@
 Tidslinjen beror på tillgänglighet och omfattningen av återkoppling från referensgruppen. Målsättningen är att bli klar i slutet på 2023. 
 
 ## Möten
-* Möte referensgrupp - 2023-06-20 10-12 
+* Möte referensgrupp - 2023-06-13 10-12 
 
 ## Referensgrupp
 Referensgruppen är listad i bokstavsordning.
