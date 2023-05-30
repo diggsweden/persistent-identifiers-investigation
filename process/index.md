@@ -10,7 +10,7 @@
 7. Möte med referensgrupp för genomgång av hur API design påverkas samt en möjlig specifikation för en uppslagningstjänst.
 8. Slutlig rekommendation tas fram
 
-Tidslinjen beror på tillgänglighet och omfattningen av återkoppling från referensgruppen. Målsättningen är att bli klar i slutet på 2023. 
+Tidslinjen beror på tillgänglighet och omfattningen av återkoppling från referensgruppen. Målsättningen är att bli klar under 2023. 
 
 ## Möten
 * Möte referensgrupp - 2023-06-13 10-12 
