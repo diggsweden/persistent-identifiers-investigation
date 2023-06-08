@@ -10,6 +10,7 @@ Exempel på ting inkluderar:
 * **Historiska händelser** som första världskriget eller månlandningen
 * **Påhittade ting** som Kalle Anka eller Gandalf
 * **Abstrakta ting** som Newtons andra lag eller en perfekt cirkel
+* **Digitala ting** som digitala bilder eller dokument
 * **Begrepp i en terminologi** som arten Homo Sapiens i Linnés systematik eller ämnet cellbiologi i de Svenska högskoleämnena
 
 ## Identifierare
