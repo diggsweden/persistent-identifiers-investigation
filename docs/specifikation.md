@@ -6,35 +6,35 @@ Nedan listar vi först rekommendationer för hur beständiga identifierare ska u
 
 ## Utformning av beständiga identifierare
 
-Då vi föredrar identifierare som också möjliggör en välkänd uppslagningsmekanism begränsar vi oss till att använda URL:er. Vidare väljer vi att begränsa oss till HTTP protokollet då det är en fundamental och välkänd del av webbarkitekturen.
+När en beständig identifierare skall utformas begränsar vi oss till att använda URL:er. Utöver att fungera som identifierare möjliggör nämligen URL:er en välkänd uppslagningsmekanism. Vidare väljer vi att begränsa oss till HTTP protokollet då det är en grundläggande och välkänd del av webbarkitekturen.
 
 > **Rekommendation BI-1** Använd URL:er med schemat http eller https.
 
-En bra princip är att beständiga identifierare uttrycker tillhörighet till en aktör som går att verifiera.
+En bra princip är att beständiga identifierare uttrycker tillhörighet till en aktör som går att verifiera. Med tillhörighet till aktör menas dock inte egennamn eller organisationsnamn. Sådana är inte lämpliga i identifieraren då de inte kan anses vara beständiga.
 
-> **Rekommendation BI-2** Använd domännamn i URL:er, undvik explicita IP adresser eller localhost.
+> **Rekommendation BI-2** Använd domännamn i URL:er, undvik organisationsnamn i domännamnet, explicita IP adresser eller localhost.
 
 Man bör undvika att inkludera information i URL:en som inte är strikt nödvändig ur perspektivet beständiga identifierare. 
 
 > **Rekommendation BI-3** Använda inte URL:er med portnummer, användarnamn eller lösenord.
 
-URL:er tillåter att man inkluderar parametrar efter ett frågetecken. Dessa parametrar används oftast när man bygger system av RPC karaktär där man vill skicka in värden till en funktion, t.ex. för att göra en sökning. Men, då de flesta implementationer brukar acceptera att man byter ordning på parametrar är det lätt att se hur man av misstag introducerar flera olika URL:er för att referera till samma ting. Frågeparametrar har också en tendens att vara närmare knutna till den specifika implementation man valt. Detta för oss till slutsatsen att det är olämpligt att använda frågeparametrar för beständiga identifierare såvida man inte har tänkt igenom situationen noga och har goda skäl.
+Det är olämpligt att använda frågeparametrar i URL:er för beständiga identifierare. URL:er tillåter att man inkluderar parametrar efter ett frågetecken. Dessa parametrar används oftast när man bygger system av RPC (Remote Procedure Call) karaktär där man vill skicka in värden till en funktion, t.ex. för att göra en sökning. Men, då de flesta implementationer brukar acceptera att man byter ordning på parametrar är det lätt att se hur man av misstag introducerar flera olika URL:er för att referera till samma ting. Frågeparametrar har också en tendens att vara närmare knutna till den specifika implementation man valt.
 
 > **Rekommendation BI-4** Använd inte URL:er med frågeparametrar.
 
-URL:er tillåter också användning av så kallade fragment som är den del som kommer efter symbolen `#`. Fragment har den speciella karaktären att de inte ingår i HTTP protokollet, dvs. man får samma svar för alla URL:er som särskiljer sig endast i fragmentet. URL:er med fragment kan alltså inte särskiljas i uppslagningsmekanismen och man tappar många möjligheter. T.ex. är det inte möjligt att tala om att en URL med fragment har upphört att existera eller bytts ut mot en annan. Man lägger också över en större del av ansvaret på klienten. Detta gör det olämpligt att använda URL:er med fragment såvida man inte har tänkt igenom situationen noga och har goda skäl. Det bör noteras att inom länkade data världen har man länge använt URL:er med fragment för företeelser. Dock är problematiken där mindre då man jobbar inom ett enhetligt ramverk med en väletablerad praxis. 
+Det är också olämpligt att använda URL:er med fragment. URL:er tillåter användning av så kallade fragment som är den del som kommer efter symbolen `#`. Fragment har den speciella karaktären att de inte ingår i HTTP protokollet, dvs. man får samma svar för alla URL:er som särskiljer sig endast i fragmentet. URL:er med fragment kan alltså inte särskiljas i uppslagningsmekanismen och man tappar många möjligheter. T.ex. är det inte möjligt att tala om att en URL med fragment har upphört att existera eller bytts ut mot en annan. Man lägger också över en större del av ansvaret på klienten. Det bör noteras att inom länkade data världen har man länge använt URL:er med fragment för företeelser. Dock är problematiken där mindre då man jobbar inom ett enhetligt ramverk med en väletablerad praxis. 
 
 > **Rekommendation BI-5** Använd inte URL:er med fragment.
 
 ## Uppslagninsmekanism för beständiga identifierare
 
-En beständiga identifierare ska kunna slås upp för att leverera information om det ting som refereras såväl som information om den beständiga identifieraren själv. Uppslagning sker via DNS och HTTP protokollen. Notera att en fullständig genomgång av DNS och HTTP ligger utanför denna rekommendation. Istället listas nedan endast de huvudsakliga situationer som förväntas uppkomma kring hantering av beständiga identifierare. Dessutom, i de exempel som ges utelämnas många HTTP headrar för att öka läsbarheten.
+En beständiga identifierare ska kunna slås upp för att leverera information om det ting som refereras såväl som information om den beständiga identifieraren själv. Uppslagning sker via DNS och HTTP protokollen. Notera att en fullständig genomgång av DNS och HTTP ligger utanför denna rekommendation. Istället listas nedan endast de huvudsakliga situationer som förväntas uppkomma kring hantering av beständiga identifierare. Observera att, i de exempel som ges utelämnas många HTTP headrar för att öka läsbarheten.
 
 ### Grundläggande regler för uppslagning
 
 Att slå upp URL:er med hjälp av DNS och HTTP är sedan tidigt 1990:tal en självklar del av hur webben fungerar. 
 
-> **Rekommendation UM-1** Uppslagning av en beständig identifierare sker via DNS för att erhålla rätt IP adress till servern som ansvarar för domänen och därefter används HTTP protokollet.
+> **Rekommendation UM-1** Uppslagning av en beständig identifierare sker via DNS för att erhålla rätt IP-adress till servern som ansvarar för domänen och därefter används HTTP protokollet.
 
 HTTP protokollet erbjuder ett antal olika metoder för att hämta och skicka information. För att bara få ut information om den beständiga identifieraren använder man den enklaste metoden HEAD. HEAD metoden är idempotent, dvs enligt HTTP protokollet får den inte ha några sidoeffekter och ger samma resultat oavsett hur många gånger den anropas.
 
