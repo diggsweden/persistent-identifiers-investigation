@@ -17,14 +17,24 @@ Tidslinjen beror på tillgänglighet och omfattningen av återkoppling från ref
 
 ## Referensgrupp
 Fler deltagare kommer att läggas till.
+
 Digg: Ulrika Domellöf Mattsson, Mattias Ekhem, Matthias Palmér
+
 E-hälsomyndigheten: Rodabe Alavi, Manne Andersson, Helena Nilsson
+
 Kungliga biblioteket: Martin Malmsten
+
 Lantmäteriet: Fredrik Persäter
+
 Naturvårdsverket: Jan Widegren
+
 RAÄ: Marcus Smith
+
 Riksarkivet: Fredrik Emanuelsson
+
 SGU: Olov Johansson
+
 SND: Johan Fihn Marberg
+
 Wikimedia Sverige: André Costa
 
