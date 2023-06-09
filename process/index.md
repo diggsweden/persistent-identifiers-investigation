@@ -24,7 +24,7 @@ E-hälsomyndigheten: Rodabe Alavi, Manne Andersson, Helena Nilsson
 
 Kungliga biblioteket: Martin Malmsten
 
-Lantmäteriet: Fredrik Persäter
+Lantmäteriet: Kristofer Gäfvert, Fredrik Persäter
 
 Naturvårdsverket: Jan Widegren
 
@@ -35,6 +35,8 @@ Riksarkivet: Fredrik Emanuelsson
 SGU: Olov Johansson
 
 SND: Johan Fihn Marberg
+
+Vetenskapsrådet: Martin Brandhagen
 
 Wikimedia Sverige: André Costa
 
