@@ -13,9 +13,18 @@
 Tidslinjen beror på tillgänglighet och omfattningen av återkoppling från referensgruppen. Målsättningen är att bli klar under 2023. 
 
 ## Möten
-* Möte referensgrupp - 2023-06-13 10-12 
+* Möte 1 referensgrupp - 2023-06-13 10-12 
 
 ## Referensgrupp
-Referensgruppen är listad i bokstavsordning.
+Fler deltagare kommer att läggas till.
+Digg: Ulrika Domellöf Mattsson, Mattias Ekhem, Matthias Palmér
+E-hälsomyndigheten: Rodabe Alavi, Manne Andersson, Helena Nilsson
+Kungliga biblioteket: Martin Malmsten
+Lantmäteriet: Fredrik Persäter
+Naturvårdsverket: Jan Widegren
+RAÄ: Marcus Smith
+Riksarkivet: Fredrik Emanuelsson
+SGU: Olov Johansson
+SND: Johan Fihn Marberg
+Wikimedia Sverige: André Costa
 
-Återstår.
