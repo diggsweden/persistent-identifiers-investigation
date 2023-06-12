@@ -6,7 +6,7 @@ Nedan listar vi först rekommendationer för hur beständiga identifierare ska u
 
 ## Utformning av beständiga identifierare
 
-När en beständig identifierare skall utformas begränsar vi oss till att använda URL:er. Utöver att fungera som identifierare möjliggör nämligen URL:er en välkänd uppslagningsmekanism. Vidare väljer vi att begränsa oss till HTTP protokollet då det är en grundläggande och välkänd del av webbarkitekturen.
+När en beständig identifierare skall utformas begränsar vi oss till att använda URL:er. Utöver att fungera som identifierare möjliggör nämligen URL:er en uppslagningsmekanism. Vi väljer också att begränsa oss till HTTP protokollet då det är en grundläggande och välkänd del av webbarkitekturen.
 
 > **Rekommendation BI-1** Använd URL:er med schemat http eller https.
 
