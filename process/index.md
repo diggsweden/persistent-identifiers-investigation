@@ -18,6 +18,10 @@ Tidslinjen beror på tillgänglighet och omfattningen av återkoppling från ref
 ## Referensgrupp
 Fler deltagare kommer att läggas till.
 
+Arbetsförmedlingen: Jonas Södergren
+
+Bolagsverket: Erik Mossing
+
 Digg: Ulrika Domellöf Mattsson, Mattias Ekhem, Matthias Palmér
 
 E-hälsomyndigheten: Rodabe Alavi, Manne Andersson, Helena Nilsson
@@ -32,9 +36,13 @@ RAÄ: Marcus Smith
 
 Riksarkivet: Fredrik Emanuelsson
 
+SCB: Patrik Wahlgren
+
 SGU: Olov Johansson
 
-SND: Johan Fihn Marberg
+Skatteverket: Per Jännebring 
+
+SND: André Jernung, Johan Fihn Marberg
 
 Vetenskapsrådet: Martin Brandhagen
 
