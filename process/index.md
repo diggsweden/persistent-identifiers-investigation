@@ -24,7 +24,7 @@ Bolagsverket: Erik Mossing
 
 Digg: Ulrika Domellöf Mattsson, Mattias Ekhem, Matthias Palmér
 
-E-hälsomyndigheten: Rodabe Alavi, Manne Andersson, Helena Nilsson
+E-hälsomyndigheten: Rodabe Alavi, Manne Andersson, Daniel Karlsson
 
 Kungliga biblioteket: Martin Malmsten
 
@@ -41,6 +41,8 @@ SCB: Patrik Wahlgren
 SGU: Olov Johansson
 
 Skatteverket: Per Jännebring 
+
+SKR: Caspar Almalander
 
 SND: André Jernung, Johan Fihn Marberg
 
