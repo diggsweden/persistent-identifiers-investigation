@@ -14,6 +14,8 @@ Tidslinjen beror på tillgänglighet och omfattningen av återkoppling från ref
 
 ## Möten
 * Möte 1 referensgrupp - 2023-06-13 10-12 - [presentation](https://docs.google.com/presentation/d/1qQ0IGlCArJ-XYTSKH8VXA05DgF3ryPEX6yxzV3HS-us/edit?usp=sharing)
+    * [Mötesanteckningar](anteckningar-1.pdf) 
+* Möte 2 referensgrupp - 2023-08-29 10-12
 
 ## Referensgrupp
 Fler deltagare kommer att läggas till.
