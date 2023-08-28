@@ -5,7 +5,7 @@ Nedan kallar vi beständiga identifierare i form av URL:er för adresser då det
 ## Fall 1 - Enkel uppslagning av företeelse
 I många fall kan adressen till beskrivningen vara snarlik adressen till företeelsen. I dessa fall kan man oftast lägga in en regel i sin webbserver för att skapa en redirect till rätt adress. 
 
-<img src="pics/HTTP_Lookup_pattern_1.svg" width="600">
+<img src="pics/HTTP_Lookup_pattern_1.svg" width="500">
 
 ```  HTTP-nolint
 GET /id/x1 HTTP/1.1
@@ -18,7 +18,7 @@ Location: /api/x1
 ## Fall 2 - Komplicerad uppslagning av företeelse
 Ibland behövs en mer komplicerad mekanism för att översätta adressen för företeelse till en adress för en beskrivning. Dvs. en enkel regel i en webbserver räcker inte, istället krävs då att man skriver kod som slår upp i en databas eller liknande. 
 
-<image src="pics/HTTP_Lookup_pattern_2.svg" width="600px"/>
+<image src="pics/HTTP_Lookup_pattern_2.svg" width="520px"/>
 
 ```  HTTP-nolint
 GET /id/x1 HTTP/1.1
