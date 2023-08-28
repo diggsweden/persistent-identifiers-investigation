@@ -13,6 +13,9 @@ Det finns i huvudsak tre fördelar med att använda beständiga identifierare f�
 2. Producenter vill kunna samordna information om ting mellan aktörer.
 3. Maskiner kan instrueras att kommunicera om ting på ett väldefinierat och automatiserat sätt.
 
+## Avgränsningar
+Med beständiga identifierare avser vi identifierare som är globalt unika och har en välkänd uppslagningsprocess. Identifierare som enbart är unika inom ett visst verksamhetssystem eller kräver domänspecifik kunskap för att slå upp är inte fokus i denna specifikation.
+
 ## Arbetsprocess
 Se [separat dokument](process/index.md).
 
