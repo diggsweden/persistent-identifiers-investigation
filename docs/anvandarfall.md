@@ -13,6 +13,7 @@ Host m1.se
 ----
 HTTP/1.1 303 See Other
 Location: /api/x1
+Link: </api/x1>; rel="describedby" 
 ```
 Redirecten ovan pekar på en beskrivning som med fördel förstås utifrån dess format. Representationens format utläses i headern ```content type```, eventuellt i kombination med profil information i headern ```content-profile``` (se UM-4 och UM-5). Vi tar här ett exempel med RDF uttryckt som JSON-LD, i det uttrycket ser vi identifieraren i klartext vilket gör att det inte går att missförstå vilken företeelse som beskrivs. (Det som står i ```@context``` är ett sätt att beskriva hur man ska tolka de olika attributen, i detta fall beskrivs bara attributet ```namn```, denna brukar oftast läggas utanför och länkas till).
 
@@ -44,6 +45,7 @@ Host: m1.se
 ----
 HTTP/1.1 303 See Other
 Location: /api/k25
+Link: </api/k25>; rel="describedby"
 ```
 
 ## Fall 3 - Få kännedom om andras beskrivningar
@@ -147,6 +149,7 @@ Host m1.se
 ----
 HTTP/1.1 303 See Other
 Location: /api/x1
+Link: </api/x1>; rel="describedby"
 ```
 
 ```  HTTP-nolint
@@ -155,6 +158,7 @@ Host m3.se
 ----
 HTTP/1.1 303 See Other
 Location: /o/2/k17
+Link: </o/2/k17>; rel="describedby"
 ```
 
 Att det är olika identifierare syns ockå i beskrivningarna. T.ex. aktören bakom m1.se hävdar som i tidigare exempel att ```https://m1.se/id/x1``` motsvarar en röd boll:
@@ -193,7 +197,19 @@ Om två aktörer är medvetna om varandra, men av olika skäl har valt att skapa
 
 <img src="pics/HTTP_Lookup_pattern_7.svg">
 
-Precis som i fallet med uppslagningstjänst används här Link alternate för att peka ut den andra identifieraren. Utöver link headrar är det möjligt att också i beskrivningen uttrycka relationer mellan idenfifierarna.
+Precis som i fallet med uppslagningstjänst används här Link alternate för att peka ut den andra identifieraren.
+
+```  HTTP-nolint
+GET /id/k17 HTTP/1.1
+Host m3.se
+----
+HTTP/1.1 303 See Other
+Location: /o/2/k17
+Link: </o/2/k17>; rel="describedby",
+      <https://m1.se/id/x1>; rel="alternate"
+```
+
+Utöver link headrar är det också möjligt att i beskrivningen uttrycka relationer mellan idenfifierarna.
 
 ```  HTTP-nolint
 GET /o/2/k17 HTTP/1.1
@@ -217,7 +233,20 @@ I det här fallet är de två aktörerna ense om att ```https://m1.se/id/x1``` �
 
 <img src="pics/HTTP_Lookup_pattern_8.svg">
 
-I bilden ovan är det enbart Link headerns som säger canonical i ena riktningen som är annorlunda än fall 7. Men, i beskrivningen är det mer som skiljer då man bytt plats på identifierarna:
+I bilden ovan är det enbart Link headerns som säger canonical i ena riktningen som är annorlunda än fall 7:
+
+
+```  HTTP-nolint
+GET /id/k17 HTTP/1.1
+Host m3.se
+----
+HTTP/1.1 303 See Other
+Location: /o/2/k17
+Link: </o/2/k17>; rel="describedby",
+      <https://m1.se/id/x1>; rel="canonical"
+```
+
+I beskrivningen är det mer som skiljer då man bytt plats på identifierarna:
 
 ```  HTTP-nolint
 GET /o/2/k17 HTTP/1.1
