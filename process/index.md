@@ -50,7 +50,7 @@ SKR: Caspar Almalander
 
 SND: André Jernung, Johan Fihn Marberg
 
-Vetenskapsrådet: Martin Brandhagen
+Vetenskapsrådet: Martin Brandhagen, Sanna Isabel Ulfsparre
 
 Wikimedia Sverige: André Costa
 
