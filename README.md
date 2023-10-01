@@ -4,7 +4,7 @@ Hantering av beständiga identifierare kan ske på många sätt. Denna profil mo
 
 Att följa profilen innebär att man beaktat alla de SKALL/BÖR/KAN regler som specificerats, mer specifikt:
 
->**KAN** - Dessa regler måste följas, annars har man inte följt profilen.<br>
+>**SKALL** - Dessa regler måste följas, annars har man inte följt profilen.<br>
 >**BÖR** - Dessa regler är starkt rekommenderade, om man inte följer dem bör man ha en stark gärna dokumenterad anledning.<br>
 **KAN** - Dessa regler är valfria, om man har ett behov som matchar regelns syfte bör man följa regeln istället för att hitta på en egen lösning.
 
