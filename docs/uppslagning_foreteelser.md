@@ -1,9 +1,9 @@
-# Användarfall uppslagning av företeelser
+# Vägledande mönster för uppslagning av företeelser
 
-Fall 1-5 beskriver olika situationer som kan uppkomma när man har en enskild beständig identifierare för en företeelse. Fall 6-9 berättar om situationer som kan uppkomma när man har flera beständiga identifierare för samma företeelse.   
+Mönster 1-5 beskriver olika situationer som kan uppkomma när man har en enskild beständig identifierare för en företeelse. Mönster 6-9 berättar om situationer som kan uppkomma när man har flera beständiga identifierare för samma företeelse.   
 
-## Fall 1 - Enkel uppslagning av företeelse
-I många fall kan identifieraren till beskrivningen vara snarlik identifieraren till företeelsen. I dessa fall kan man oftast lägga in en regel i sin webbserver för att skapa en redirect till rätt identifierare. 
+## Mönster 1 - Enkel uppslagning av företeelse
+I många fall kan identifieraren till beskrivningen vara snarlik identifieraren till företeelsen. I dessa fall kan man lägga in en regel i sin webbserver för att skapa en redirect till rätt identifierare. 
 
 <img src="pics/HTTP_Lookup_pattern_1.svg" width="500">
 
@@ -34,8 +34,8 @@ Content-type: application/ld+json
 }
 ```
 
-## Fall 2 - Komplicerad uppslagning av företeelse
-Ibland behövs en mer komplicerad mekanism för att översätta identifieraren för företeelse till en identifierare för en beskrivning. Dvs. en enkel regel i en webbserver räcker inte, istället krävs då att man skriver kod som slår upp i en databas eller liknande. 
+## Mönster 2 - Komplicerad uppslagning av företeelse
+Ibland behövs en mer komplicerad mekanism för att översätta identifieraren för en företeelse till en identifierare för en beskrivning. Dvs. en enkel regel i en webbserver räcker inte, istället krävs då att man skriver kod som slår upp i en databas eller liknande. 
 
 <image src="pics/HTTP_Lookup_pattern_2.svg" width="520px"/>
 
@@ -48,7 +48,7 @@ Location: /api/k25
 Link: </api/k25>; rel="describedby"
 ```
 
-## Fall 3 - Få kännedom om andras beskrivningar
+## Mönster 3 - Få kännedom om andras beskrivningar
 Om det finns flera beskrivningar utöver den kanoniska kan man peka ut även dessa via link headern med describedby relationen.
 
 <img src="pics/HTTP_Lookup_pattern_3.svg" width="600px"/>
@@ -98,8 +98,8 @@ Content-type: application/ld+json
 ```
 
 
-## Fall 4 - Hänvisa till uppslagstjänst för andras beskrivningar
-Om man inte har koll på vilka ytterligare beskrivningar som finns kan man hänvisa till en extern uppslagstjänst.
+## Mönster 4 - Hänvisa till uppslagstjänst för andras beskrivningar
+Om man inte har koll på vilka ytterligare beskrivningar som finns kan det vara bra att hänvisa till en extern uppslagstjänst.
 
 <img src="pics/HTTP_Lookup_pattern_4.svg" width="1000px"/>
 
@@ -114,7 +114,7 @@ Link:
   <https://m4.se/lookup?uri=https%3A%2F%2Fm1.se%2Fid%2Fx1>; rel="alternate"
 ```
 
-## Fall 5 - Uppslagningstjänst
+## Mönster 5 - Uppslagningstjänst
 Uppslagstjänsten fungerar nästan på samma sätt som en vanlig uppslagning, den enda skillnaden är att man pekar tillbaka på den ursprungliga identifieraren via link headern med relationen canonical.
 
 <img src="pics/HTTP_Lookup_pattern_5.svg" width="1000px"/>
@@ -132,12 +132,12 @@ Link:
   <https://m3.se/o/2/k17>; rel="describedby"
 ```
 
-Om man nu kombinerar fall 4 och 5 får man en mer komplett bild om hur relationerna uttrycks:
+Om man nu kombinerar mönster 4 och 5 får man en mer komplett bild om hur relationerna uttrycks:
 <img src="pics/HTTP_Lookup_pattern_complete.svg" width="1000px"/>
 
 **TODO: Hitta på en till http header som gör det möjligt att förstå att adressen till uppslagningstjänsten är just en uppslagningstjänst som särskiljer från användning av link rel=alternate i fall 7, 8 och 9.** 
 
-## Fall 6 - Dubbla identifierare utan relationer - UNDVIK!
+## Mönster 6 - Dubbla identifierare utan relationer - UNDVIK!
 När en aktörer inte har kännedom eller väljer att gå sin egen väg kan det hända att en företeelse får fler än en identifierare. Utan explicita relationer mellan identifierna går det inte att utläsa att det handlar om samma företeelse.
 
 <img src="pics/HTTP_Lookup_pattern_6.svg" width="800px"/>
@@ -161,7 +161,7 @@ Location: /o/2/k17
 Link: </o/2/k17>; rel="describedby"
 ```
 
-Att det är olika identifierare syns ockå i beskrivningarna. T.ex. aktören bakom m1.se hävdar som i tidigare exempel att ```https://m1.se/id/x1``` motsvarar en röd boll:
+Att det är olika identifierare syns också i beskrivningarna. T.ex. aktören bakom m1.se hävdar som i tidigare exempel att ```https://m1.se/id/x1``` motsvarar en röd boll:
 
 ```  HTTP-nolint
 GET /api/x1 HTTP/1.1
@@ -192,8 +192,8 @@ Content-type: application/ld+json
 ```
 
 
-## Fall 7 - Dubbla identifierare med relationer utan överenskommelse - UNDVIK!
-Om två aktörer är medvetna om varandra, men av olika skäl har valt att skapa en egen identifierare för samma företeelse och inte kan komma överens om vems identifierare som är kanonisk får man en förvirrad situation. Även denna situation bör undvikas, men situationen är iallafall bättre än fall 6 eftersom man här iallafall ger informationskonsumenter en möjlighet att förstå att det handlar om samma företeelse. Då detta inte är ett tekniskt problem är det möjligt att tiden utvisar vilken identifierare som används mest och då bör vara den kanoniska vilket förhoppningsvis då kan accepteras av den ena aktören.
+## Mönster 7 - Dubbla identifierare med relationer utan överenskommelse - UNDVIK!
+Om två aktörer är medvetna om varandra, men av olika skäl har valt att skapa en egen identifierare för samma företeelse och inte kan komma överens om vems identifierare som är kanonisk får man en förvirrad situation. Även denna situation bör undvikas, men situationen är bättre än mönster 6 då man här ger informationskonsumenter en möjlighet att förstå att det handlar om samma företeelse. Då detta inte är ett tekniskt problem är det möjligt att tiden utvisar vilken identifierare som används mest och då bör vara den kanoniska vilket förhoppningsvis kan accepteras av den ena aktören.
 
 <img src="pics/HTTP_Lookup_pattern_7.svg">
 
@@ -227,13 +227,13 @@ Content-type: application/ld+json
 }
 ```
 
-## Fall 8 - Dubbla identifierare med relationer och överenskommelse
+## Mönster 8 - Dubbla identifierare med relationer och överenskommelse
 
 I det här fallet är de två aktörerna ense om att ```https://m1.se/id/x1``` är den officiella identifieraren som ska användas i beskrivningarna. Men trots det vill aktören bakom m3.se ha en egen identifierare som gör en redirect till sin beskrivning snarare än till beskrivning som aktören bakom m1.se tillhandahåller.
 
 <img src="pics/HTTP_Lookup_pattern_8.svg">
 
-I bilden ovan är det enbart Link headerns som säger canonical i ena riktningen som är annorlunda än fall 7:
+I bilden ovan är det enbart Link headerns som säger canonical i ena riktningen som är annorlunda än mönster 7:
 
 
 ```  HTTP-nolint
@@ -264,11 +264,10 @@ Content-type: application/ld+json
 }
 ```
 
-## Fall 9 - Dubbla identifierare med uppslagningstjänst
+## Mönster 9 - Dubbla identifierare med uppslagningstjänst
 
 Slutligen är det möjligt att det finns dubbla identifierare där man kommit överens och samtidigt att man använder en uppslagningstjänst.
 
 <img src="pics/HTTP_Lookup_pattern_9.svg"/>
 
-Notera att fall påminner starkt om fall 5, den enda skillnaden är att man har ytterligare en identifierare som när den slås upp pekar på en annan beskrivning än den beskrivning man får om man använder den kanoniska identifieraren eller uppslagningstjänsten.
-
+Notera att fall påminner starkt om mönster 5, den enda skillnaden är att man har ytterligare en identifierare som när den slås upp pekar på en annan beskrivning än den beskrivning man får om man använder den kanoniska identifieraren eller uppslagningstjänsten.
