@@ -201,6 +201,7 @@ HTTP/1.1 410 GONE
 Det finns situationer när flera identifierare skapats för samma ting, i de fallen är det lämpligt att permanent peka om den beständiga identifieraren till en annan beständig identifierare. Den beständiga identifierare man pekar ut kan vara skapad av samma eller av en annan aktör.  
 
 ><a name="UM11"></a> **Regel UM-11:** Uppslagning av beständiga identifierare som har bytts ut SKALL besvaras med HTTP status kod 308 där location headern används för att peka ut den nya beständiga identifieraren.
+
 ``` HTTP-nolint
 # Exempel UM-11
 GET /foo HTTP/1.1
@@ -213,3 +214,14 @@ Location: https://org2.se/bar
 Slutligen är det viktigt att kunna särskilja de fall när ting delas upp eller slås samman med andra ting från de fall när ting tas bort (UM-10) eller byter beständiga identifierare (UM-11).
 
 ><a name="UM12"></a> **Regel UM-12:** Uppslagning av beständiga identifierare som refererar till ting som slagits samman med andra ting eller slagits isär till flera ting SKALL besvaras med status koden 300. När så är möjligt BÖR man också peka ut beständiga identifierare till de ting som innefattar det ursprungliga tinget via link headern successor-version.
+
+``` HTTP-nolint
+# Exempel UM-12
+GET /foo HTTP/1.1
+Host: org1.se
+---
+HTTP/1.1 300 Multiple Choices
+Link:
+  </foo_part1>; rel=successor-version,
+  </foo_part2>; rel=successor-version; 
+```
