@@ -38,7 +38,7 @@ Att slå upp URL:er med hjälp av DNS och HTTP är sedan tidigt 1990:tal en sjä
 
 HTTP protokollet erbjuder ett antal olika metoder för att hämta och skicka information. För att bara få ut information om den beständiga identifieraren använder man den enklaste metoden HEAD. HEAD metoden är idempotent, dvs enligt HTTP protokollet får den inte ha några sidoeffekter och ger samma resultat oavsett hur många gånger den anropas.
 
-><a name="UM2"></a> **Regel UM-2** Uppslagning av information om en beständig identifierare SKALL ske via HTTP HEAD metoden där svaret ges i form av HTTP headrar.
+><a name="UM2"></a> **Regel UM-2:** Uppslagning av information om en beständig identifierare SKALL ske via HTTP HEAD metoden där svaret ges i form av HTTP headrar.
 
 ### Uppslagning av informationsresurser
 

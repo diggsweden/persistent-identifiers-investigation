@@ -13,12 +13,13 @@ Utöver formella regler består profilen också av ett antal vägledande mönste
 
 1. [Bakgrund / behovsbild](docs/bakgrund.md)
 2. [Regler beständiga identifierare och uppslagning](docs/regler.md) ⇐ **den formella specifikationen**
-3. Vägledande mönster - uppslagning informationsresurser
+3. [Vägledande mönster - uppslagning informationsresurser](docs/uppslagning_informationsresurser.md)
 4. [Vägledande mönster - uppslagning företeelser](docs/uppslagning_foreteelser.md)
-4. [Definitioner / begreppslista](docs/begreppslista.md)
-5. Implementation / exempel
-6. Fördjupning
-7. Uppslagning av alternativa beskrivningar
+5. [Definitioner / begreppslista](docs/begreppslista.md)
+6. [Rekommendationer / praxis](docs/rekommendationer.md)
+7. [Användarfall](docs/anvandarfall.md)
+8. [Användning i API:er](docs/api.md)
+9. Uppslagning av alternativa beskrivningar
 
 
 ## Motivation
