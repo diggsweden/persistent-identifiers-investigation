@@ -18,7 +18,9 @@ Tidslinjen beror på tillgänglighet och omfattningen av återkoppling från ref
     * [Mötesanteckningar](anteckningar-1.pdf) 
 * Möte 2 referensgrupp - 2023-08-29 10-12
     * [presentation](https://docs.google.com/presentation/d/1gM537vD3Efx2GYqDTShqULy77_SKXTrN7tbEoAXs1uU/edit?usp=sharing)
-    * [Mötesanteckningar](Referensgrupp beständiga identifierare mötesanteckningar 29 aug.pdf) 
+    * [Mötesanteckningar](anteckningar-2.pdf) 
+* Möte 3 referensgrupp - 2023-10-02 13-15
+    * [presentation](https://docs.google.com/presentation/d/1CFM-BFJ5M_UpEHguwd1sWrTT70RXSeziV2GO_D4i3Yg/edit?usp=sharing)
 
 ## Referensgrupp
 
