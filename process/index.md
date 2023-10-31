@@ -21,6 +21,7 @@ Tidslinjen beror på tillgänglighet och omfattningen av återkoppling från ref
     * [Mötesanteckningar](anteckningar-2.pdf) 
 * Möte 3 referensgrupp - 2023-10-02 13-15
     * [presentation](https://docs.google.com/presentation/d/1CFM-BFJ5M_UpEHguwd1sWrTT70RXSeziV2GO_D4i3Yg/edit?usp=sharing)
+    * [Mötesanteckningar](anteckningar-3.pdf)
 
 ## Referensgrupp
 
