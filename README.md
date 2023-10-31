@@ -17,7 +17,7 @@ Utöver formella regler består profilen också av ett antal vägledande mönste
 4. [Vägledande mönster - uppslagning företeelser](docs/uppslagning_foreteelser.md)
 5. [Definitioner / begreppslista](docs/begreppslista.md)
 6. [Rekommendationer / praxis](docs/rekommendationer.md)
-7. [Användarfall](docs/anvandarfall.md)
+7. [Användningsfall](docs/anvandningsfall.md)
 8. [Användning i API:er](docs/api.md)
 9. Uppslagning av alternativa beskrivningar
 

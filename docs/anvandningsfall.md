@@ -1,6 +1,7 @@
-# Användarfall
+# Användningsfall
 
 ## Svensk bolagsinformation
+
 Separation mellan beständiga identifierare för företag och API anrop.
 
 ``` HTTP-nolint
