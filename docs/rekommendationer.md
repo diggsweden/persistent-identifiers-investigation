@@ -79,7 +79,7 @@ Det finns också nackdelar med att koppla isär beständiga identifierare från 
 Man bör också fundera på om det finns en skillnad i strategi mellan våra mest fundamentala och samhällsbärande myndigheter som t.ex. Skatteverket, Lantmäteriet, KB, SCB och de många mindre myndigheter som har större risk för att stöpas om.
 
 ## 4. Markera gamla beständiga identifierare - tombstones
-Enligt regel UM-10 så ska beständiga identifierare som tagits bort besvaras med HTTP status koden 410. Utöver detta kan HTTP svaret inkludera en representation med information om tinget borttagning, en tombstone.
+Enligt regel UM-10 så ska beständiga identifierare som tagits bort besvaras med HTTP status koden 410. Det är värt att upprepa att man inte får återanvända URI:er för nya syften. En bra princip är att HTTP svaret inkludera en representation med information om tinget borttagning, en gravsten / tombstone.
 
 Utöver tombstone informationen är det möjligt att tillhandahålla information om tingets borttagning på två sätt:
 1. Datum när tinget tagits bort HTTP-headern `sunset`.
