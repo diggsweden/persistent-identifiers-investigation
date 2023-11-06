@@ -23,7 +23,7 @@ Med koncept menas en gruppering / samling av referenser som har liknande karakt�
 
 **https://lm.se/id/fastighet/123** - en företeelse i form av en fastighet.<br>
 **https://lm.se/res/fastighet/123** - informationsresurs som beskriver en fastighet.<br>
-**https://scb.se/def/SNI2007/01.131** - definitionen av en potatisodlare enligt Svenskt NäringslivsIndex från 2007.<br>
+**https://scb.se/def/SNI/01.131** - definitionen av en potatisodlare enligt Svenskt NäringslivsIndex från 2007.<br>
 **https://bv.se/spec/CBV-SE/Business** - en applikationsprofil som beskriver vilka egenskaper från EUs Core Business Vocabulary som används i Sverige för att beskriva ett företag.
 
 Det är viktigt att komma ihåg att de förslagna typerna ovan (id, res, def och spec) bara är exempel, det finns gott om exempel på andra typer (t.ex. id och doc eller terms). Det är också möjligt att skapa djupare strukturer om man har ting som är organiserade i en naturlig hierarki. T.ex. så kanske man vill exponera att potatisodlare ligger inom avdelningen för "Företag inom jordbruk och skogsbruk" som betecknas med A, då blir adressen istället
