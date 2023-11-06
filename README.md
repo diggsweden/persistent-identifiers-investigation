@@ -40,7 +40,7 @@ Profilen innefattar ett antal dokument, från formella regler till rekommendatio
 
 ## Målgrupp och behov
 
-Profilen är i huvudsak riktad till de som bygger system inom offentlig förvaltning som görs synliga på webben. Det gäller både för tillgängliggörande av information via sidor / filer som via API:er. Särskilt viktiga är rekommendationerna för de som bygger system som ska samverka med andra system / aktörer.
+Profilen är i huvudsak riktad till de som bygger system inom offentlig förvaltning som görs synliga på webben. Det gäller både för tillgängliggörande av information via sidor / filer som via API:er. Särskilt viktig är profilen för de som bygger system som ska samverka med andra system / aktörer.
 
 Det finns i huvudsak tre fördelar med att använda beständiga identifierare för olika ting:
 
