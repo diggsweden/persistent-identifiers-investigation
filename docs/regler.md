@@ -26,6 +26,14 @@ Det är också olämpligt att använda URL:er med fragment. URL:er tillåter anv
 
 ><a name="BI5"></a> **Regel BI-5:** Fragment BÖR INTE användas i URL:er för beständiga identifierare.
 
+Man ska inte inkludera versionsnummer i beständiga identifierare så länge det ting som refereras till bevarar sin huvudsakliga karaktär. Orsaken är att versionsangivelser i URL:er skapar förvirring kring vilken beständig identifierare som gäller. Hanteringen skulle dessutom snabbt resultera i ett behov av ytterligare regler för automatiserad uppdatering till senaste versionen.
+
+><a name="BI6"></a> **Regel BI-6:** Versionsnummer SKALL INTE inkluderas i URL:er för beständiga identifierare.
+
+I filsystem har nästan alla filer filändelser som .pdf, .docx, .txt för att ange vilken typ av resurs som lagrats. Ibland ser man också webbadresser som inkluderar filändelser, t.ex. .html och .asp. Dessa filändelser är dock inte strikt nödvändiga utan finns kvar av historiska skäl eller på grund av att man valt en direkt integration med ett filsystem. Då beständig identifierare är tänkta att referera till ting oberoende av format är användning av filtyper inte lämpligt.
+
+><a name="BI7"></a> **Regel BI-7:** Filändelser SKALL INTE användas i URL:er för beständiga identifierare.
+
 ## Uppslagninsmekanism för beständiga identifierare
 
 En beständiga identifierare ska kunna slås upp för att leverera information om det ting som refereras såväl som information om den beständiga identifieraren själv. Uppslagning sker via DNS och HTTP protokollen. Notera att en fullständig genomgång av DNS och HTTP ligger utanför denna rekommendation. Istället listas nedan endast de huvudsakliga situationer som förväntas uppkomma kring hantering av beständiga identifierare. Observera att, i de exempel som ges utelämnas många HTTP headrar för att öka läsbarheten.
@@ -198,7 +206,7 @@ Host: org1.se
 HTTP/1.1 410 GONE
 ```
 
-Det finns situationer när flera identifierare skapats för samma ting, i de fallen är det lämpligt att permanent peka om den beständiga identifieraren till en annan beständig identifierare. Den beständiga identifierare man pekar ut kan vara skapad av samma eller av en annan aktör.  
+Det finns situationer när flera identifierare har skapats för samma ting, i de fallen är det lämpligt att reducera mängden identifierare genom att permanent peka om den beständiga identifieraren till en annan beständig identifierare. Den beständiga identifierare man pekar ut kan vara skapad av samma eller av en annan aktör.  
 
 ><a name="UM11"></a> **Regel UM-11:** Uppslagning av beständiga identifierare som har bytts ut SKALL besvaras med HTTP status kod 308 där location headern används för att peka ut den nya beständiga identifieraren.
 
