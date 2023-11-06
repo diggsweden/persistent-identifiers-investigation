@@ -21,9 +21,9 @@ I illustrationen nedan introduceras tre vanliga fall för hur beständiga identi
 
 **Fall 2** - man introducerar en separat beständig identifierare, t.ex. för att undvika att exponera adresser till specifika system / lagringslösningar.
 
-**Fall 3** - man introducerar en beständig identifierare introduceras för att kunna tala om företeelser som inte är digitala, på samma gång uppnår man ett oberoende till tekniska system som API:er.
+**Fall 3** - man introducerar en beständig identifierare för att kunna tala om företeelser som inte är digitala, på samma gång uppnår man ett oberoende till tekniska system som API:er.
 
-Denna profil fokuserar inte på fall 1 då det är normen för hur man länkar till resurser på internet redan idag. Istället är fokus på att beskriva när och hur man ska använda sig av fall 2 och fall 3. För en djupare genomgång av fall 2 och fall 3, läs vägledande mönster för uppslagning av [informationsresurser](docs/uppslagning_informationsresurser.md) och [företeelser](docs/uppslagning_foreteelser.md).
+Det mesta i fall 1 motsvarar normen för hur man länkar till resurser på internet redan idag, men reglerna i profilen kan ändå vara en nyttig påminnelse om god sed. Störst fokus i profilen ligger i att beskriva när och hur man ska använda sig av fall 2 och fall 3. För en djupare genomgång av fall 2 och fall 3, läs vägledande mönster för uppslagning av [informationsresurser](docs/uppslagning_informationsresurser.md) och [företeelser](docs/uppslagning_foreteelser.md).
 
 ## Profilen består av följande delar
 Profilen innefattar ett antal dokument, från formella regler till rekommendationer och användningsfall. Nedan listas dokumenten i föreslagen läsordning:
