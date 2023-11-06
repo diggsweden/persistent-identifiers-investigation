@@ -4,7 +4,7 @@
 Reglerna BI-1 till BI-7 ger förhållningsregler om vilka URL:er som är lämpliga för beständiga identifierare, t.ex. att man inte skall använda parametrar, versionsnummer eller fragment. Men reglerna tillhandahåller inte en mall för hur man ska utforma sina URL:er i mer detalj. Detta är medvetet då det finns få objektiva kriterier som man kan hänvisa till som gör att den ena utformningen är bevisbart bättre än den andra. Detta gör att det finns en uppsjö med förslag av hur URL:er ska utformas, se t.ex. den genomgång som görs i [den studie som ligger till grund för SEMICS 10 rules for Persistent URIs](https://joinup.ec.europa.eu/collection/semic-support-centre/document/10-rules-persistent-uris).
 
 ### Huvudalternativet - samma domän som resten av webben
-I kapitel 4.1 i studien rekommenderas en URL design enligt nedan. Det är samma rekommendation som också förespråkas i Sverige i kapitlet ["Använd beständiga identifierare"]((https://digg.se/kunskap-och-stod/oppna-och-delade-data/offentliga-aktorer/vagledning-for-att-tillgangliggora-information#h-Anvandbestandigaidentifierare)) i vägledningen för att tillgängliggöra information hos DIGG.
+I kapitel 4.1 i studien rekommenderas en URL design enligt nedan. Det är samma rekommendation som också förespråkas i Sverige i kapitlet ["Använd beständiga identifierare"](https://digg.se/kunskap-och-stod/oppna-och-delade-data/offentliga-aktorer/vagledning-for-att-tillgangliggora-information#h-Anvandbestandigaidentifierare) i vägledningen för att tillgängliggöra information hos DIGG.
 
 >http(s)://{domän}/{typ}/{koncept}/{referens}
 
