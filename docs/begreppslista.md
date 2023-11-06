@@ -1,5 +1,8 @@
 # Definitioner / begreppslista
 
+Följande UML diagram visar hur några av de mest centrala begreppen hänger samman.
+![](pics/begrepp.svg)
+
 ## Ting
 Ett ting är något vi har ett behov att kommunicera om. När vi talar om tinget benämner vi det oftast med ett namn eller en identifierare för att bättre kunna koordinera vår kommunikation över tid. När vi talar om tinget uttrycker vi påståenden, sanna eller falska, om antinget tinget själv eller relationer till andra ting. 
 
