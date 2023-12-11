@@ -53,7 +53,7 @@ Huvudregeln är att man ska undvika att skapa nya egna identifierare när en ann
    3. Man tillhandahåller en mer generell / objektiv / representativ mängd information om tinget, detta perspektiv bör kunna bekräftas av oberoende parter.
 3. Tinget förvaltas av den egna organisationen som en del i en samling som är mer komplett än den samling där den existerande beständiga identifieraren ingår.
 
-Om man väljer att skapa en egen beständig identifierare som konkurrerar med en existerande identifierare enligt 1-3 ovan bör man informera den andra parten med förhoppningen om att man kan få en samsyn inklusive en ambition om att fasa ut de gamla identifierarna med tiden. I den bästa av alla världar innebär det ett minskat förvaltningsansvar för den andra parten och därmed tas emot positivt.
+Om man väljer att skapa en egen beständig identifierare som konkurrerar med en existerande identifierare enligt 1-3 ovan bör man informera den andra parten med förhoppningen om att man kan få en samsyn inklusive en ambition om att fasa ut de gamla identifierarna med tiden. I den bästa av alla världar innebär det ett minskat förvaltningsansvar för den andra parten och därmed tas emot positivt. När man introducerar egna beständiga identifierare BÖR man peka ut andra identifierare som alternate eller canonical. Se [vägledande mönster 6, 7 och 8 för uppslagning av företeelser](uppslagning_foreteelser.md) (mönster 8 är det som förespråkas).
 
 Notera också att i många fall kan man undvika hela problemet genom att se det som att man talar om olika ting. T.ex. folkbokföringsadress och sjukskrivning kan ses som egenskaper på en person, men är i praktiken bättre representerade som separata ting med egna beständiga identifierare med kopplingar till samma person (via dess beständiga identifierare).
 
@@ -67,7 +67,7 @@ Om det finns / kan etableras sammarbete inom en sektor där det finns en aktör 
 
 Det kan leda till att man får hög kvalitet på hanteringen av beständiga identifierare där reglerna i denna profil följs. Med fördel stöds detta av tekniska system som gör att olika aktörer kan administrera sina beständiga identifierare på ett oberoende sätt. Manuell hantering via en central funktion är sannolikt inte en bra lösning då det risker att bromsa införandet av beständiga identifierare.
 
-Det är dock viktigt att notera att man här frångår en av internets styrkor om decentralisering. En central lösning skapar potentielt en sårbarhet i form av en flaskhals som, om den får tekniska problem / utsätts för attacker, kan göra att en hel sektor drabbas.
+Det är dock viktigt att notera att man här frångår man en av internets styrkor om decentralisering. En central lösning skapar potentielt en sårbarhet i form av en flaskhals som, om den får tekniska problem / utsätts för attacker, kan göra att en hel sektor drabbas.
 
 ### Ämnesspecifika domäner för beständiga identifierare
 Det är välkänt att ett av de svåraste problemen inom datavetenskap är hitta bra namngivning. Att för varje behov hitta på en ny domän som lämpar sig för att fånga upp vad som innefattas både idag och på lite sikt är svårt.
