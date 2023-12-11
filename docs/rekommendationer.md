@@ -90,3 +90,7 @@ Läs mer om Sunset på [RFC-8594](https://www.rfc-editor.org/rfc/rfc8594.html)
 
 ## 5. Relationen mellan verksamhetsidentifierare och beständiga identifierare
 När man skapar beständiga identifierare bör man ta hänsyn till de verksamhetsidentifierare som redan finns och använda dem i konstruktionen av en URL, typiskt genom att lägga till verksamhetsidentifieraren sist efter en basurl. Detta beskrivs i kapitlet [Natural keys](https://patterns.dataincubator.org/book/natural-keys.html) i Linked Data Patterns. Det motsvaras också av regeln "Re-use existing identifiers" i [SEMICS 10 rules for Persistent URIs](https://joinup.ec.europa.eu/collection/semic-support-centre/document/10-rules-persistent-uris).
+
+En förutsättning för användningen av verksamhetsidentifierarna är att de i sig är beständiga. Detta innebär oftast att det finns en genomtänkt process på plats som garanterar att de inte ändras över tid, t.ex. vid systembyten. Typiska exempel på verksamhetsidentifierare är diarienummer och koder i kodlistor, t.ex. de 4-siffriga kommunkoder som SCB definierat.
+
+Det finns också verksamhetsidentifierare som är så pass etablerade att de känns igen utanför den egna organisationen, t.ex. organisationsnummer, och fastighetsbeteckningar är välkända i Sverige. Internationellt ser vi hur ISBN nummer, DOI, och SWIFT/BIC identifierare är något som ibland känns igen utifrån sin form, iallafall av personer med digital kompetens.
