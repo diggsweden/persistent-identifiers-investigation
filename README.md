@@ -37,6 +37,7 @@ Profilen innefattar ett antal dokument, från formella regler till rekommendatio
 7. [Användningsfall](docs/anvandningsfall.md)
 8. [Användning i API:er](docs/api.md)
 9. [Konfiguration av webbservrar](docs/tekniker.md)
+10. [Referenser](docs/referenser.md)
 
 ## Målgrupp och behov
 
